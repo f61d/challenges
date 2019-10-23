@@ -3,7 +3,7 @@
 ***
 ## 一、整数溢出  
 程序主要分为三块主要内容，分别是创建文本，删除文本，编辑文本。首先分析create部分  
-![](./index_files/1.png)
+![](./index_files/1.png)  
 可以看到这里有一处明显的整数溢出，利用这一点我们可以构造ROP链泄露libc基址并执行system函数。下面是exp  
 ```python
 from pwn import *
@@ -63,7 +63,7 @@ p.interactive()
 ***
 ## 二、unlink  
 分析代码可以看到在delete删除文本的时候，在free掉堆块之后并没有清除掉地址数组里的指针   
-![](./index_files/2.png)
+![](./index_files/2.png)  
 于是我们的整个攻击流程就基本确定下来了，就是先create两个smallbin大小的堆块并释放，使smallbin中有空闲堆块。然后重新申请较大的堆块，伪造堆块并进行unlink攻击。这里我们可以先将一个指针改为可以修改的任意指针，这样我们就可以很方便的多次对任意位置写了。最后我们将free函数先改为puts函数泄露libc基址，然后再将其改为system函数getshell。当然这里面还有很多需要注意的细节，这些会在exp中提到   
 ```python
 from pwn import *
