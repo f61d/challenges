@@ -1,5 +1,5 @@
 # Challenges
-
+> It is recommended that you put your wp directory to a **level 2** directory of challenge type. For example, ```pwn/VMEscape/BabyQemu```
 ## Description
 
 For challenge submission.
