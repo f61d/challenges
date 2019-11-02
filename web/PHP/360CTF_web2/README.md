@@ -1,14 +1,14 @@
-#信息收集
+Information Search
 ----
 信息收集很重要
 
-#Examination Site
+Examination Site
 ----
 * git
 * PHP Include
 * PHP Upload
 
-#Analysis
+Analysis
 ----
 Use dirsearch.py to scan the website dir,and will found the .git
 ```bash
@@ -75,7 +75,8 @@ Now we know that we need to upload a jpg with php code and then include it.
 Howevers,we need to bypass the *$check()*.
 The payloads is **showimage.php?/../../ac78b24a/[Your php code].jpg**
 
-#Exploit
+Exploit
+----
 The *upload.php* doesn't offer the upload interface so that we need to modify the http packages.
 ```http
 POST /upload.php HTTP/1.1
