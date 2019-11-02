@@ -21,6 +21,7 @@ Then we will get 4 files:
 * index.php
 
 The essential code:
+
 From *include.php*
 ```php
 function check($file)
