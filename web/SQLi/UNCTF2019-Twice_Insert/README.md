@@ -15,13 +15,17 @@ UNCTF-Twice_Insert
 
 3)注册一个新用户`scl`，password为`1`，然后注册用户`scl’and 1#`（该用户名用于测试注入），password为`1`，用于后面的测试<br>
 修改用户`scl’and 1#`的密码为`0`<br>
-![](./images/4.png)<br>
+  ![](./images/4.PNG)
+  <br>
 修改成功：<br>
-![](./images/7.png)<br>
+  ![](./images/7.PNG)
+  <br>
 4)将scl的密码重置为`1`：注册新的用户`scl’and 0#`，password为`1`，然后登陆该账号修改密码<br>
-![](./images/5.png)<br>
+  ![](./images/5.PNG)
+  <br>
 回显如下：<br>
-![](./images/6.png)<br>
+  ![](./images/6.PNG)
+  <br>
 密码更新失败，说明存在布尔盲注。
 
 编写EXP
