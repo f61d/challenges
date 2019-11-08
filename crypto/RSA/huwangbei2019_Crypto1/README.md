@@ -32,9 +32,9 @@ Reference:
 Further Attacks On Server-Aided Rsa Cryptosystems
 ![screenshot1.png](./screenshot/screenshot1.png)
 
-According to the article, we can fristly calculate the a\*b and (a+b)
+According to the article, we can fristly calculate the a\*b and (a+b).
 
-.As we have known N and g,we can calculate the u and v:
+As we have known N and g,we can calculate the u and v:
 ```python
 h = (N-1)/(g)
 u = h/(g) # 4 * xy
