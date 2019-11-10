@@ -30,7 +30,7 @@ Howevers,the a,b is unknown and we have to solve them.
 
 Reference:
 Further Attacks On Server-Aided Rsa Cryptosystems
-![screenshot1.png](./screenshot/screenshot1.png)
+![](./screenshot/screenshot1.png)
 
 According to the article, we can fristly calculate the a\*b and (a+b).
 
@@ -42,8 +42,8 @@ v = h%(g) # 2 * (x+y)
 ```
 And now we have x + y = v + c\*g and xy = u -c where c is the unknown carry in (N-1)/g in base g.
 Since The range of possible values for c is  given cg < 4*(x+y) and x,y <N^(1/2)/g,so that there are of the order of C = sqrt(N)/(g\*g) values of c to test.
-![screenshot2.png](./screenshot/screenshot2.png)
-![screenshot3.png](./screenshot/screenshot3.png)
+![](./screenshot/screenshot2.png)
+![](./screenshot/screenshot3.png)
 
 The article gives us a algorithm:Find a D being an integer larger than sqrt(C) and form the lists
 **b^0,b^D,b^2D,……,b^D\*D mod N** and **b^u,b^u-1,……,b^u-D**
