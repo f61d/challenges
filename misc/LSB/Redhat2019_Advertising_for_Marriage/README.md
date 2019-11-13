@@ -38,6 +38,7 @@ volatility -f Advertising\ for\ Marriage.raw prefile=WinXPSP2x86 dumpfiles -Q 0x
 ```
 ![](./screenshot/screenshot5.png)
 尝试打开文件，报错: IHDR:CRC
+
 ![](./screenshot/screenshot6.png)
 
 报错位置是IHDR区域，猜测可能是图片尺寸被修改导致。
