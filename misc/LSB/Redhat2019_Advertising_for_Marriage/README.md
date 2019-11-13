@@ -58,11 +58,13 @@ for w in range(1024):
             exit()
 ```
 成功修复图片，得到一张模糊有flag字样的图片
+
 ![](./screenshot/screenshot7.png)
 
 emmmm...然后就有很多人在疯狂地猜测flag，然而最终也没猜出来。
 实际上这是一个LSB隐写的图片。
 利用StegSolve查看文件的低位，发现猫腻
+
 ![](./screenshot/screenshot8.png)
 
 这里似乎隐藏着什么数据，而700000009似乎是这些数据的长度。
@@ -112,6 +114,7 @@ def extract(in_file, out_file, password):
 
 	# Write decrypted data
 ```
+
 ![](./screenshot/screenshot9.png)
 最后得到密钥：b1cxneedmoneyandgirlfirend
 解码base64得到：
